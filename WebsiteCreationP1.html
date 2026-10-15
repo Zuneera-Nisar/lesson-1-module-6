@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #16324f;
+            padding: 18px 8%;
+        }
+
+        .logo {
+            color: white;
+            font-size: 26px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #ffd166;
+        }
+
+        .banner {
+            min-height: 450px;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.45),
+                    rgba(0, 0, 0, 0.45)),
+                url("https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+
+        .banner h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .banner p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffd166;
+            color: #16324f;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #ffb703;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #16324f;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #16324f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .banner h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">MyWebsite</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="home">
+        <div>
+            <h1>Welcome to My Website</h1>
+            <p>Explore new ideas and discover amazing things.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="content" id="about">
+            <h2>About Us</h2>
+            <p>
+                Welcome to our website! We share useful information,
+                creative ideas, and exciting experiences.
+            </p>
+        </section>
+
+        <section class="content" id="services">
+            <h2>Our Services</h2>
+            <p>
+                We create beautiful and user-friendly websites
+                for everyone.
+            </p>
+        </section>
+
+        <section class="content" id="contact">
+            <h2>Contact Us</h2>
+            <p>Thank you for visiting our website.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+        console.log("Welcome to My Website!");
+
+        const button = document.querySelector(".btn");
+
+        button.addEventListener("click", function () {
+            console.log("Learn More button clicked!");
+        });
+    </script>
+
+</body>
+
+</html>
